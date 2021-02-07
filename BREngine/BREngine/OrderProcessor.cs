@@ -5,9 +5,8 @@ namespace BREngine
     public class OrderProcessor
     {
         public OrderProcessor() { }
-        public bool Process()
+        public void Process()
         {
-            throw new NotImplementedException();
         }
     }
 }

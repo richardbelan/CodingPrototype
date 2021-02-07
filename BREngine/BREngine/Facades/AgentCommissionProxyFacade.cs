@@ -22,7 +22,7 @@ namespace BREngine.Proxy
         public AgentCommissionProxyFacade() { }
         public void GenerateCommission()
         {
-            throw new NotImplementedException();
+            this.GenerateTransaction();
         }
     }
 }

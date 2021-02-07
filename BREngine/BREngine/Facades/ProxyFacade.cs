@@ -6,12 +6,13 @@ namespace BREngine
 {
     public class ProxyFacade
     {
-        public int NoOfTransactions { get; } = 0;
+        private int noOfTransactions = 0;
+        public int NoOfTransactions { get => noOfTransactions; }
 
         public ProxyFacade() {}
         public void GenerateTransaction()
         {
-            throw new NotImplementedException();
+            noOfTransactions++;
         }
     }
 }

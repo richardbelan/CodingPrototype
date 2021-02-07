@@ -22,15 +22,15 @@ namespace BREngine.Proxy
         public MemberShipProxyFacade() { }
         public void Activate()
         {
-            throw new NotImplementedException();
+            this.GenerateTransaction();
         }
         public void Upgrade()
         {
-            throw new NotImplementedException();
+            this.GenerateTransaction();
         }
         public void EmailOwner()
         {
-            throw new NotImplementedException();
+            this.GenerateTransaction();
         }
     }
 }

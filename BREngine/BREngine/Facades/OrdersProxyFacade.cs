@@ -22,7 +22,7 @@ namespace BREngine.Proxy
         public OrdersProxyFacade() { }
         public void GeneratePackingSlip()
         {
-            throw new NotImplementedException();
+            this.GenerateTransaction();
         }
     }
 }
