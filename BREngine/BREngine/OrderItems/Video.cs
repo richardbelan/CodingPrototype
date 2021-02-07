@@ -9,7 +9,6 @@ namespace BREngine.OrderItems
         public Video(string name) { _name = name; }
         public static OrderItem GetOrderItem(string name)
         {
-            throw new NotImplementedException();
             return new Video(name);
         }
 
