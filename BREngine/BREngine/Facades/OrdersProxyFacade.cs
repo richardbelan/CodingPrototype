@@ -20,7 +20,7 @@ namespace BREngine.Proxy
         }
 
         public OrdersProxyFacade() { }
-        public void generatePackingSlip()
+        public void GeneratePackingSlip()
         {
             throw new NotImplementedException();
         }

@@ -1,11 +1,12 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using BREngine.Proxy;
 
 namespace BRUnitTest
 {
+    // I cannot generate all test for all function within the time frame given for this project
     [TestClass]
-    public class Singletons
+    public class FacadeBasicFunctionality
     {
         [TestMethod]
         public void TestAgentCommissionProxyFacade()
@@ -13,9 +14,12 @@ namespace BRUnitTest
             try
             {
                 AgentCommissionProxyFacade instance = AgentCommissionProxyFacade.Instance;
-                Assert.IsNotNull(instance);
+                int noOfTx = instance.NoOfTransactions;
+                instance.GenerateCommission();
+                
+                Assert.AreEqual(noOfTx+1, instance.NoOfTransactions);
             }
-            catch(System.Exception)
+            catch (System.Exception)
             {
                 Assert.Fail();
             }
@@ -26,7 +30,10 @@ namespace BRUnitTest
             try
             {
                 MemberShipProxyFacade instance = MemberShipProxyFacade.Instance;
-                Assert.IsNotNull(instance);
+                int noOfTx = instance.NoOfTransactions;
+                instance.Activate();
+
+                Assert.AreEqual(noOfTx + 1, instance.NoOfTransactions);
             }
             catch (System.Exception)
             {
@@ -39,7 +46,10 @@ namespace BRUnitTest
             try
             {
                 OrdersProxyFacade instance = OrdersProxyFacade.Instance;
-                Assert.IsNotNull(instance);
+                int noOfTx = instance.NoOfTransactions;
+                instance.GeneratePackingSlip();
+
+                Assert.AreEqual(noOfTx + 1, instance.NoOfTransactions);
             }
             catch (System.Exception)
             {
@@ -52,7 +62,10 @@ namespace BRUnitTest
             try
             {
                 RoyaltyDeptProxyFacade instance = RoyaltyDeptProxyFacade.Instance;
-                Assert.IsNotNull(instance);
+                int noOfTx = instance.NoOfTransactions;
+                instance.GeneratePackingSlip();
+
+                Assert.AreEqual(noOfTx + 1, instance.NoOfTransactions);
             }
             catch (System.Exception)
             {
@@ -65,7 +78,10 @@ namespace BRUnitTest
             try
             {
                 ShippingDeptProxyFacade instance = ShippingDeptProxyFacade.Instance;
-                Assert.IsNotNull(instance);
+                int noOfTx = instance.NoOfTransactions;
+                instance.GeneratePackingSlip();
+
+                Assert.AreEqual(noOfTx + 1, instance.NoOfTransactions);
             }
             catch (System.Exception)
             {
