@@ -20,9 +20,10 @@ namespace BREngine.Proxy
         }
 
         public OrdersProxyFacade() { }
-        public void GeneratePackingSlip()
+        public void GeneratePackingSlip(string name)
         {
             this.GenerateTransaction();
+            Console.WriteLine("OrdersProxyFacade.GeneratePackingSlip:" + name);
         }
     }
 }

@@ -4,16 +4,17 @@ using System.Text;
 
 namespace BREngine.OrderItems
 {
-    public class Book : OrderItem
+    public class Book : PhysicalProduct
     {
-        public Book(string name) { _name = name; }
-        public static OrderItem GetOrderItem(string name)
+        public Book(string name) : base(name) { }
+        public new static OrderItem GetOrderItem(string name)
         {
             return new Book(name);
         }
         public override void Process()
         {
-            throw new NotImplementedException();
+            base.Process();
+            BREngine.Proxy.RoyaltyDeptProxyFacade.Instance.GeneratePackingSlip(_name);
         }
     }
 }

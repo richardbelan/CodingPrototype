@@ -23,14 +23,17 @@ namespace BREngine.Proxy
         public void Activate()
         {
             this.GenerateTransaction();
+            Console.WriteLine("Activate membership");
         }
         public void Upgrade()
         {
             this.GenerateTransaction();
+            Console.WriteLine("Upgrade membership");
         }
-        public void EmailOwner()
+        public void EmailOwner(string action)
         {
             this.GenerateTransaction();
+            Console.WriteLine("Email membership: " + action);
         }
     }
 }

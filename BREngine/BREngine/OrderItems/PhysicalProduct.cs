@@ -13,7 +13,8 @@ namespace BREngine.OrderItems
         }
         public override void Process()
         {
-            throw new NotImplementedException();
+            BREngine.Proxy.ShippingDeptProxyFacade.Instance.GeneratePackingSlip(_name);
+            BREngine.Proxy.AgentCommissionProxyFacade.Instance.GenerateCommission(_name);
         }
 
     }

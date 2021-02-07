@@ -4,16 +4,20 @@ using System.Text;
 
 namespace BREngine.OrderItems
 {
-    public class Video : OrderItem
+    public class Video : PhysicalProduct
     {
-        public Video(string name) { _name = name; }
-        public static OrderItem GetOrderItem(string name)
+        public Video(string name) : base(name) { }
+        public new static OrderItem GetOrderItem(string name)
         {
             return new Video(name);
         }
         public override void Process()
         {
-            throw new NotImplementedException();
+            base.Process();
+
+            // the inventory wouldn't be happy for just adding new slip
+            if (_name == "Learning To Ski")
+                BREngine.Proxy.ShippingDeptProxyFacade.Instance.GeneratePackingSlip("First Aid");
         }
     }
 }

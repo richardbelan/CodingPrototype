@@ -20,9 +20,10 @@ namespace BREngine.Proxy
         }
 
         public AgentCommissionProxyFacade() { }
-        public void GenerateCommission()
+        public void GenerateCommission(string name)
         {
             this.GenerateTransaction();
+            Console.WriteLine("Generating commission for " + name);
         }
     }
 }

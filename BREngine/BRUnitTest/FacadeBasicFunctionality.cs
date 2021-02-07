@@ -15,7 +15,7 @@ namespace BRUnitTest
             {
                 AgentCommissionProxyFacade instance = AgentCommissionProxyFacade.Instance;
                 int noOfTx = instance.NoOfTransactions;
-                instance.GenerateCommission();
+                instance.GenerateCommission("no name");
                 
                 Assert.AreEqual(noOfTx+1, instance.NoOfTransactions);
             }
@@ -47,7 +47,7 @@ namespace BRUnitTest
             {
                 OrdersProxyFacade instance = OrdersProxyFacade.Instance;
                 int noOfTx = instance.NoOfTransactions;
-                instance.GeneratePackingSlip();
+                instance.GeneratePackingSlip("No name");
 
                 Assert.AreEqual(noOfTx + 1, instance.NoOfTransactions);
             }
@@ -63,7 +63,7 @@ namespace BRUnitTest
             {
                 RoyaltyDeptProxyFacade instance = RoyaltyDeptProxyFacade.Instance;
                 int noOfTx = instance.NoOfTransactions;
-                instance.GeneratePackingSlip();
+                instance.GeneratePackingSlip("no name");
 
                 Assert.AreEqual(noOfTx + 1, instance.NoOfTransactions);
             }
@@ -79,7 +79,7 @@ namespace BRUnitTest
             {
                 ShippingDeptProxyFacade instance = ShippingDeptProxyFacade.Instance;
                 int noOfTx = instance.NoOfTransactions;
-                instance.GeneratePackingSlip();
+                instance.GeneratePackingSlip("no name");
 
                 Assert.AreEqual(noOfTx + 1, instance.NoOfTransactions);
             }

@@ -15,14 +15,17 @@ namespace BREngine.Proxy
                 // no need to lock, this is an single threaded library
                 if (instance == null)
                     instance = new RoyaltyDeptProxyFacade();
+
+                System.Diagnostics.Debug.WriteLine("RoyaltyDeptProxyFacade.GeneratePackingSlip");
                 return instance;
             }
         }
 
         public RoyaltyDeptProxyFacade() { }
-        public void GeneratePackingSlip()
+        public void GeneratePackingSlip(string name)
         {
             this.GenerateTransaction();
+            Console.WriteLine("RoyaltyDeptProxyFacade.GeneratePackingSlip: " + name);
         }
     }
 }

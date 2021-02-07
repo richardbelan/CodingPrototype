@@ -53,6 +53,51 @@ namespace BRUnitTest
                 Assert.Fail();
             }
         }
+        [TestMethod]
+        public void TestVideoLearningToSki()
+        {
+            try
+            {
+                OrderItem item = Video.GetOrderItem("Learning To Ski");
+                item.Process();
+
+                Assert.IsNotNull(item);
+            }
+            catch (System.Exception)
+            {
+                Assert.Fail();
+            }
+        }
+        [TestMethod]
+        public void TestNEWMembershipProcessing()
+        {
+            try
+            {
+                OrderItem item = Membership.GetOrderItem("NEW");
+                item.Process();
+
+                Assert.IsNotNull(item);
+            }
+            catch (System.Exception)
+            {
+                Assert.Fail();
+            }
+        }
+        [TestMethod]
+        public void TestUpgradeMembershipProcessing()
+        {
+            try
+            {
+                OrderItem item = Membership.GetOrderItem("Upgrade");
+                item.Process();
+
+                Assert.IsNotNull(item);
+            }
+            catch (System.Exception)
+            {
+                Assert.Fail();
+            }
+        }
     }
 }
 
