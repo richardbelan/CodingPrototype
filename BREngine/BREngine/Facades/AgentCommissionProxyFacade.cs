@@ -12,8 +12,6 @@ namespace BREngine.Proxy
         {
             get
             {
-                throw new NotImplementedException();
-
                 // no need to lock, this is an single threaded library
                 if (instance == null)
                     instance = new AgentCommissionProxyFacade();
