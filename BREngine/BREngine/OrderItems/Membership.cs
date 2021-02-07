@@ -13,8 +13,6 @@ namespace BREngine.OrderItems
         }
         public override void Process()
         {
-            throw new NotImplementedException();
-
             // Time limitation prevents more proper handling of membership
             if(_name == "NEW")
                 BREngine.Proxy.MemberShipProxyFacade.Instance.Activate();
