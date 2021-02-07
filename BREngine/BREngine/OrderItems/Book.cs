@@ -11,7 +11,9 @@ namespace BREngine.OrderItems
         {
             return new Book(name);
         }
-        //             throw new NotImplementedException();
-
+        public override void Process()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

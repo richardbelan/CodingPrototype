@@ -11,5 +11,10 @@ namespace BREngine.OrderItems
         {
             return new PhysicalProduct(name);
         }
+        public override void Process()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

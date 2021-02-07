@@ -7,5 +7,6 @@ namespace BREngine.OrderItems
     public abstract class OrderItem
     {
         protected string _name;
+        public abstract void Process();
     }
 }
